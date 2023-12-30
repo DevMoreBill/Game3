@@ -10,10 +10,6 @@ using System.Windows.Forms;
 
 namespace Game3
 {
-    using System;
-    using System.Drawing;
-    using System.Windows.Forms;
-
     public partial class MainForm : Form
     {
         private Game game;
@@ -24,6 +20,7 @@ namespace Game3
             InitializeComponent();
             game = new Game(10);
             gameBoard = new GameBoard(10, this, game);
+            game.AssignGameBoard(gameBoard);
         }
     }
 

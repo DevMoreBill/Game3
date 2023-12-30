@@ -13,7 +13,6 @@ namespace Game3
 
         public GameBoard(int size, Form form, Game game)
         {
-            this.game = game;
             cellButtons = new CellButton[size, size];
             const int buttonSize = 40;
             for (int row = 0; row < size; row++)
@@ -31,6 +30,7 @@ namespace Game3
                     form.Controls.Add(button);
                 }
             }
+            this.game = game;
         }
 
         private void CellButton_Click(object sender, EventArgs e)
