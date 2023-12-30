@@ -25,19 +25,18 @@ namespace Game3
             }
 
             grid[row, col] = true;
-            playerXTurn = !playerXTurn;
 
             // Добавляем обозначение X или O на кнопку в зависимости от текущего игрока
-            CellButton button = gameBoard.GetCellButton(row, col);
             if (playerXTurn)
             {
-                button.Text = "X";
+                gameBoard.GetCellButton(row, col).Text = "X";
             }
             else
             {
-                button.Text = "O";
+                gameBoard.GetCellButton(row, col).Text = "O";
             }
 
+            playerXTurn = !playerXTurn;
             return true;
         }
     }

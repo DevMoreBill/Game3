@@ -13,16 +13,17 @@ namespace Game3
     using System;
     using System.Drawing;
     using System.Windows.Forms;
-     
+
     public partial class MainForm : Form
     {
-        public Game game;
+        private Game game;
+        private GameBoard gameBoard;
 
         public MainForm()
         {
             InitializeComponent();
             game = new Game(10);
-            var board = new GameBoard(10, this);
+            gameBoard = new GameBoard(10, this, game);
         }
     }
 

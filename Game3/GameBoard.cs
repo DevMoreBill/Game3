@@ -9,9 +9,11 @@ namespace Game3
     public class GameBoard
     {
         private CellButton[,] cellButtons;
+        private Game game;
 
-        public GameBoard(int size, Form form)
+        public GameBoard(int size, Form form, Game game)
         {
+            this.game = game;
             cellButtons = new CellButton[size, size];
             const int buttonSize = 40;
             for (int row = 0; row < size; row++)
